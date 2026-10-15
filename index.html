@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Maisha Mastora</title>
+  <meta name="description" content="Personal website of Maisha Mastora, PhD student at the University of New Hampshire.">
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+  <div class="skip-links">
+    <a href="#site-nav">Skip to primary navigation</a>
+    <a href="#main">Skip to content</a>
+    <a href="#footer">Skip to footer</a>
+  </div>
+
+  <header class="masthead">
+    <div class="masthead__inner">
+      <a class="site-title" href="index.html">Maisha Mastora</a>
+      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <ul class="nav" id="site-nav">
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="collaborators.html">Collaborators</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="publications.html">Publications</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <div class="page">
+    <aside class="sidebar" itemscope itemtype="https://schema.org/Person">
+      <div class="author__avatar"><a href="index.html"><img src="assets/images/avatar.jpg" alt="Maisha Mastora" itemprop="image"></a></div>
+      <h3 class="author__name"><a href="index.html" itemprop="name">Maisha Mastora</a></h3>
+      <p class="author__bio" itemprop="description">PhD Student, Resilient Architecture Lab · Department of Electrical and Computer Engineering, University of New Hampshire.</p>
+      <button class="follow-btn" id="follow-btn" aria-expanded="false" aria-controls="author-urls">Follow</button>
+      <ul class="author__urls" id="author-urls">
+        <li class="loc">Durham, NH, USA</li>
+        <li><a href="mailto:maisha.mastora@unh.edu">Email</a></li>
+        <li><a href="https://www.linkedin.com/in/maisha-mastora/">LinkedIn</a></li>
+      </ul>
+    </aside>
+
+    <main class="content" id="main">
+      <p>Hello and welcome! I am a PhD student at the <strong>Resilient Architecture Lab</strong> at the University of New Hampshire, where I work under the guidance of <a href="collaborators.html">Dr. Dean Sullivan</a>, and I expect to graduate in summer 2027. Computing systems rely on layers of hardware and low-level software, and a defect at any layer can undermine everything built on top of it. My work asks how we can find and fix those defects automatically, and how we can tell honestly whether a proposed fix is correct.</p>
+
+      <p>My research follows automated program repair across several levels of abstraction, namely register-transfer level (RTL) hardware, high-level synthesis (HLS) code, and firmware. A thread that connects these topics is the evaluation of large language models (LLMs) as repair tools. I care about benchmarks and oracles that measure real progress, so a large part of my work studies where pass rates mislead and what a trustworthy evaluation needs.</p>
+
+      <h2>Research Areas</h2>
+      <ul>
+        <li><strong>Automated Program Repair for Hardware (RTL)</strong> <a class="tag" href="publications.html#mdts26">MDTS'26</a> <a class="tag" href="publications.html#glsvlsi26">GLSVLSI'26</a></li>
+        <li><strong>LLM-Based HLS Repair and Benchmarking</strong> <a class="tag" href="publications.html#iccd26">ICCD'26</a></li>
+        <li><strong>Firmware Security Repair</strong> <a class="tag" href="publications.html#fta26">FTA'26</a></li>
+        <li><strong>LLMs as Judges of Hardware Equivalence</strong> <a class="tag" href="publications.html#icfpt26-audit">ICFPT'26</a> <a class="tag" href="publications.html#icfpt26-poster">ICFPT'26 Poster</a></li>
+        <li><strong>Hardware and Firmware Security</strong></li>
+      </ul>
+
+      <div class="callout">
+        <p class="callout__title">Open to academic and industry roles</p>
+        <p>I am looking for opportunities in both academia and industry, including faculty positions, industry research roles, and hardware security roles. If your department or team works on AI for hardware design, firmware security, or trustworthy evaluation of code models, I would be glad to hear from you. Please reach out by email.</p>
+      </div>
+
+      <h2>Current Projects</h2>
+      <ul>
+        <li><strong>LLM Memorization in Code Repair.</strong> I am testing whether an LLM's repair success reflects real understanding or recall of code it has seen before. The study reruns repair on semantics-preserving variants of each design (renamed, reformatted, and reordered code) and compares the results with the originals.</li>
+        <li><strong>Mining Firmware Security Fixes.</strong> I am mining the version history of open-source Bluetooth Low Energy firmware (Zephyr, Apache NimBLE, and MCUboot) to find recurring security fix patterns. The fixes are grouped into bug families, with the goal of turning them into reusable automated repair templates.</li>
+        <li><strong>Mutator Engine for RTL Repair (TGM).</strong> TGM is a repair engine that searches for fixes to buggy hardware designs by applying guided mutation operators to the RTL source. It uses fault localization to decide where to mutate and differential simulation to check candidates, so a patch counts as a repair only when it is verified and not merely when it passes the tests.</li>
+        <li><strong>Reliable Oracles for HLS Repair.</strong> I am extending my benchmark work on high-level synthesis, with a focus on how trustworthy the test oracles behind LLM repair results really are.</li>
+      </ul>
+
+      <h2>Affiliation</h2>
+      <p>I am part of the <strong>Resilient Architecture Lab</strong> in the Department of Electrical and Computer Engineering at the University of New Hampshire. You can read more about my background on the <a href="about.html">About</a> page and find the people I work with on the <a href="collaborators.html">Collaborators</a> page.</p>
+    </main>
+  </div>
+
+  <footer class="footer" id="footer">
+    <div class="footer__mark">University of New Hampshire · Resilient Architecture Lab</div>
+    <div>© 2026 Maisha Mastora. All rights reserved.</div>
+  </footer>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
